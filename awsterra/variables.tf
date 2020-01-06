@@ -17,7 +17,9 @@ variable "key_name" {}
 
 variable "public_key_path" {}
 
-variable "instance_count" {}
+variable "instance_count" {
+    default = 1
+}
 
 variable "server_instance_type" {}
 
