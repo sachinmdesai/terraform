@@ -1,10 +1,6 @@
-variable "key_name" {
-    default = "tfkey"
-}
+variable "key_name" {}
 
-variable "public_key_path" {
-    default = "/home/ec2-user/.ssh/id_rsa.pub"
-}
+variable "public_key_path" {}
 
 variable "subnet_ip" {
     type = "list"
@@ -16,4 +12,6 @@ variable "instance_type" {}
 
 variable "security_group" {}
 
-variable "subnets" {}
+variable "subnets" {
+    type = "list"
+}
