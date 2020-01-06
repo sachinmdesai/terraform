@@ -32,7 +32,7 @@ resource "aws_instance" "tf_server" {
         Name = "tf_server_public_${count.index +1}"
     }
     key_name = "${aws_key_pair.tf_auth.id}"
-    vpc_security_group_id = "[${var.security_group}]"
-    subnet_id = "${element(var.subnet , count.index)}"
-    user_data = "${template_file.user-init.*.rendered[count.index]}"
+    vpc_security_group_id = ["${var.security_group}"]
+    subnet_id = "${element(var.subnets , count.index)}"
+    user_data = "${data.template_file.user-init.*.rendered[count.index]}"
 }
