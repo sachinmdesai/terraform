@@ -6,4 +6,3 @@ variable "public_cidrs" {
 
 variable "accessip" {}
 
-variable "vpc_cidr" {}
